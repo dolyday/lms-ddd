@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiPlay, FiClock, FiBookOpen, FiUser, FiShoppingBag, FiCreditCard, FiCalendar, FiTrendingUp, FiEye, FiDownload } from 'react-icons/fi';
+import { FiPlay, FiClock, FiBookOpen, FiUser, FiShoppingBag, FiCreditCard, FiCalendar, FiTrendingUp, FiEye, FiDownload, FiAward } from 'react-icons/fi';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -348,7 +348,13 @@ const Dashboard = () => {
                             >
                               <FiEye className="h-4 w-4 inline" />
                             </Link>
-                            <button className="text-green-600 hover:text-green-900">
+                            <Link
+                              to={`/course-certificate/${course.id}`}
+                              className="text-green-600 hover:text-green-900 ml-4"
+                            >
+                              <FiAward className="h-4 w-4 inline" />
+                            </Link>
+                            <button className="text-purple-600 hover:text-purple-900">
                               <FiDownload className="h-4 w-4 inline" />
                             </button>
                           </td>

@@ -18,6 +18,7 @@ import Dashboard from './pages/Dashboard';
 import CoursePreview from './pages/CoursePreview';
 import ThankYou from './pages/ThankYou';
 import CourseAssignments from './pages/CourseAssignments';
+import CourseCertificate from './pages/CourseCertificate';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/course-preview/:sulg" element={<CoursePreview />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/course-assignments/:slug" element={<CourseAssignments />} />
+            <Route path="/course-certificate/:courseId" element={<CourseCertificate />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FiX, FiPlay, FiCheck, FiUsers, FiMessageSquare, FiVideo, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiX, FiPlay, FiCheck, FiUsers, FiMessageSquare, FiVideo, FiChevronDown, FiChevronUp, FiAward } from 'react-icons/fi';
 
 const CoursePreview = () => {
   const { id } = useParams();
@@ -297,6 +297,13 @@ const CoursePreview = () => {
                 className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center space-x-2 space-x-reverse"
               >
                 <span>الواجبات</span>
+              </Link>
+              <Link
+                to={`/course-certificate/${course.id}`}
+                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2 space-x-reverse"
+              >
+                <FiAward className="h-5 w-5" />
+                <span>الشهادة</span>
               </Link>
             </div>
 
